@@ -41,7 +41,6 @@ print(rozwiaz_rownanie(input("Wpisz równanie, które chcesz rozwiązać : ")))
 
 
 
-
 print(rozwiaz_rownanie((input("Wpisz równanie, pamietaj niewiadoma musi występować jako pierwsza : "))))
 
 
