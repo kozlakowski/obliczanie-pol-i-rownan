@@ -1,32 +1,47 @@
-print()
+# def +
+# rozdzielic znaki ( x musi byc pierwszy )
+# if znak jest jakis --> return odpowiednie rownanie ( "x = " + str(cos - cos) )
+# num1 i num2 musi być integer
 
+def rozwiaz_rownanie(rownanie):
 
-
-print("Zostaniesz poproszony o napisanie działania z jedną niewiadomą, program rozwiąże je za Ciebie")
-print("Pamiętaj że niewiadoma 'x' musi występować w działaniu jako pierwsza  ")
-
-
-def solve_eq(equation):
-    x, znak, num1, equal, num2 = equation.split()
-
+    x, znak, num1, rownosc, num2 = rownanie.split()
     num1, num2 = int(num1), int(num2)
 
     if znak == "+":
-
         return "x = " + str(num2 - num1)
 
     elif znak == "-":
-
-        return "x = " + str(num2 + num1)
+        return "x = " + str(num2 - num1)
 
     elif znak == "*":
-
         return "x = " + str(num2 / num1)
 
     elif znak == "/":
-
         return "x = " + str(num2 * num1)
 
+    else:
+        ("Należy użyć mnożenia, dzielenia, dodawania lub odejmowania")
+
+print(rozwiaz_rownanie(input("Wpisz równanie, które chcesz rozwiązać : ")))
 
 
-print(solve_eq(input("Wpisz działanie : ")))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+print(rozwiaz_rownanie((input("Wpisz równanie, pamietaj niewiadoma musi występować jako pierwsza : "))))
+
+
