@@ -1,39 +1,62 @@
-import math
-
-def get_area(shape): # Dopiero pozniej zajmuje sie ta funkcja
+def get_area(shape): # Nastepnie zajmuje sie tym
 
     shape = shape.lower()
 
-    if shape == "rectangle":
-        rectangle_area()
-    elif shape == "circle":
-        circle_area()
+    if shape == "prostokat":
+        prostokat_area()
+
+    elif shape == "kwadrat":
+        kwadrat_area()
+
     else:
-        print("Enter rectangle or circle")
-
-def rectangle_area(): # Tym zajmuje sie jako trzecim
-    length = float(input("What is the lenght : "))
-    width = float(input("What is the width : "))
-
-    area = length * width
-
-    print("Area of the rectangle is", area)
-
-def circle_area(): # Tym zajmuje sie jako czwartym
-    radius = float(input("Enter the radius : "))
-
-    area = math.pi * (math.pow(radius, 2)) # Wykonuje działanie na pole koła
-
-    print("The area of the circle is {:.2f}".format(area))
+        print("You must pick kwadrat or prostokąt")
 
 
-def main():  # Najpierw zajmowałem się ta funkja
+def prostokat_area():
 
-    shape_type = input("Get area for what shape : ")
+    dlugosc = float(input("Enter length : "))
+    szerokosc = float(input("Enter width : "))
+
+    area = dlugosc * szerokosc
+
+    print("Area of the prostokat is :", area)
+
+
+
+def kwadrat_area():
+
+    dlugosc_boku = float(input("Enter length : "))
+
+    area = dlugosc_boku **2
+
+    print("Area of the square is :", area)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def main(): # Tym zajmuje sie na poczatku
+
+    shape_type = input("Get area of what shape : ")
 
     get_area(shape_type)
-
-
 
 
 
